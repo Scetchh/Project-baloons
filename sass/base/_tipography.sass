@@ -22,6 +22,11 @@ body
         animation-timing-function: ease
         backface-visibility: hidden
         animation-fill-mode: backwards
+        @include respond(tab-land)
+            font-size: 4rem
+        @include respond(tab-port)
+            font-size: 3.3rem
+            letter-spacing: .5rem
     &__secondary
         display: block
         font-weight: 200
@@ -35,6 +40,11 @@ body
         backface-visibility: hidden
         margin-bottom: 5rem
         animation-fill-mode: backwards
+        @include respond(tab-land)
+            font-size: 3.5rem
+        @include respond(tab-port)
+            font-size: 3rem
+            letter-spacing: .5rem
 
 .title-secondary
     font-size: $title-secondary-size
@@ -52,6 +62,12 @@ body
     &_white
         color: $color-white
         position: relative
+    @include respond(tab-land)
+            font-size: 3.5rem
+    @include respond(tab-port)
+        font-size: 3rem
+        letter-spacing: .5rem
+        z-index: 10
 
 .title-third
     font-size: $title-third-size
@@ -64,3 +80,5 @@ body
     letter-spacing: .2rem
     font-weight: 400
     line-height: 140%
+    @include respond(tab-land)
+        word-break: break-all

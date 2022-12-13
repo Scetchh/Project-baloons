@@ -12,7 +12,10 @@
         display: inline-block
         &:not(:last-child)
             margin-right: 5rem
-            
+            @include respond (tab-land)
+                margin-right: 1.5rem
+            @include respond (tab-port)
+                margin: 2.5rem 1.5rem           
     &__link
         
         &:link, &:visited

@@ -8,6 +8,10 @@
     transition: all .3s
     &:hover
         transform: translateY(-1.5rem) scale(1.03)
+    @include respond(tab-land)
+        padding: 1.5rem
+    @include respond(tab-port)
+        margin-bottom: 3rem
     &__icon
         font-size: 6.3rem
         display: inline-block

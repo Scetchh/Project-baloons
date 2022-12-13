@@ -3,6 +3,10 @@
     perspective: 150rem
     -moz-perspective: 150rem
     position: relative
+    @include respond(tab-land)
+        height: 60rem
+    @include respond(tab-port)
+        margin-bottom: 4rem
     &__side
         height: 100%
         transition: .7s all ease-out
@@ -28,6 +32,8 @@
         height: 21rem
         background-blend-mode: hard-light
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        @include respond(tab-land)
+            height: 30rem
         &_1
             background: $color-brown-light url('../img/card-1.jpg') center / cover no-repeat
         &_2
@@ -44,6 +50,8 @@
         top: 18rem
         right: 0
         color: $color-white
+        @include respond(tab-land)
+            top: 27rem
     &__descr
         display: block
     &__ul
@@ -54,11 +62,16 @@
             font-size: $paragraph-size
             letter-spacing: .2rem
             font-weight: 700
-            border-bottom: 1px solid $color-grey
+            text-decoration-line: underline
+            text-underline-offset: .2rem
             width: auto
             text-align: center
             &:not(:last-child)
                 margin-bottom: 2rem
+            @include respond(tab-port)
+                display: block
+                font-size: 2rem 
+               
     &__span
         background: linear-gradient(90deg, $color-brown-light 3.65%, $color-brown-dark 100%)
         padding: 1rem 2rem .3rem 2rem
@@ -77,11 +90,22 @@
         color: $color-white
         font-weight: 300
         text-transform: uppercase
+        @include respond(tab-port)
+            font-size: 2.5rem
         &_price
             padding-top: 0rem
             font-size: 6rem
             font-weight: 500
+            @include respond(tab-port)
+                margin-bottom: 10rem
     &__btn
         font-size: 2rem
         letter-spacing: .5rem
         width: 65%
+        @include respond(tab-port)
+            width: 50%
+            font-size: 2.5rem
+            
+
+
+    

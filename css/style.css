@@ -832,6 +832,7 @@ body {
 }
 @media (max-width: 900px) {
   .tour-card {
+    height: auto;
     margin-bottom: 4rem;
   }
 }
@@ -847,6 +848,12 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
 }
+@media (max-width: 900px) {
+  .tour-card__side {
+    position: relative;
+    padding-bottom: 11rem;
+  }
+}
 .tour-card__side_front {
   background-color: #FAFAFA;
 }
@@ -854,8 +861,20 @@ body {
   background: linear-gradient(90deg, #BA8554 3.65%, #A14F03 100%);
   transform: rotateY(180deg);
 }
+@media (max-width: 900px) {
+  .tour-card__side_back {
+    transform: rotateY(0deg);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    margin-top: -13rem;
+  }
+}
 .tour-card:hover .tour-card__side_front {
   transform: rotateY(-180deg);
+}
+@media (max-width: 900px) {
+  .tour-card:hover .tour-card__side_front {
+    transform: rotateY(0deg);
+  }
 }
 .tour-card:hover .tour-card__side_back {
   transform: rotateY(0deg);
@@ -944,6 +963,7 @@ body {
 @media (max-width: 900px) {
   .tour-card__backside-text {
     font-size: 2.5rem;
+    padding-top: 14rem;
   }
 }
 .tour-card__backside-text_price {
@@ -965,6 +985,7 @@ body {
   .tour-card__btn {
     width: 50%;
     font-size: 2.5rem;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -1253,6 +1274,11 @@ body {
     max-width: 58rem;
   }
 }
+@media (max-width: 600px) {
+  .row {
+    max-width: 45rem;
+  }
+}
 
 .col-1-of-2 {
   width: calc((100% - 6rem) / 2);
@@ -1321,6 +1347,11 @@ body {
   list-style: none;
   text-align: center;
   text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .footer__list {
+    padding: 2rem;
+  }
 }
 .footer__item {
   display: inline-block;
@@ -1512,4 +1543,9 @@ body {
 .section-book {
   padding: 10rem;
   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7));
+}
+@media (max-width: 900px) {
+  .section-book {
+    padding: 4rem;
+  }
 }/*# sourceMappingURL=style.css.map */

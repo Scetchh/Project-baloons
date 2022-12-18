@@ -8,6 +8,8 @@
         list-style: none
         text-align: center
         text-transform: uppercase
+        @include respond(phone)
+            padding: 2rem
     &__item
         display: inline-block
         &:not(:last-child)
